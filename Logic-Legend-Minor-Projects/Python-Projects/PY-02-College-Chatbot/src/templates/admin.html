@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — College Query Bot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background: #F1F5F9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; }
+    .admin-container { max-width: 1200px; margin: 0 auto; }
+    .admin-card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); margin-bottom: 25px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+    th, td { padding: 10px 12px; border: 1px solid #E2E8F0; text-align: left; }
+    th { background: #F8FAFC; color: #475569; }
+    .badge { padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px; }
+    .badge-pending { background: #FEF3C7; color: #92400E; }
+    .badge-resolved { background: #D1FAE5; color: #065F46; }
+    .btn-action { padding: 5px 10px; font-size: 12px; cursor: pointer; border-radius: 4px; border: none; }
+    .btn-resolve { background: #10B981; color: white; }
+    .btn-delete { background: #EF4444; color: white; }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    {% if login_required %}
+    <div class="admin-card" style="max-width: 400px; margin: 80px auto;">
+      <h2><i class="fa-solid fa-lock"></i> Staff Administration Login</h2>
+      {% if error %}<div style="color: red; margin-bottom: 10px;">{{ error }}</div>{% endif %}
+      <form method="POST" action="/admin">
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label>Username</label>
+          <input type="text" name="username" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+        </div>
+        <div class="form-group" style="margin-bottom: 15px;">
+          <label>Password</label>
+          <input type="password" name="password" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+        </div>
+        <button type="submit" class="btn-submit" style="width: 100%;">Sign In</button>
+      </form>
+      <p style="font-size: 12px; color: #64748B; margin-top: 15px;">Demo Credentials: <code>admin</code> / <code>admin123</code></p>
+      <a href="/" style="font-size: 13px; color: #2563EB;">← Back to Chat</a>
+    </div>
+    {% else %}
+    <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <div>
+        <h2>College AI Chatbot — Administration Portal</h2>
+        <span style="color: #64748B;">Logged in as: <strong>{{ admin_user }}</strong></span>
+      </div>
+      <div>
+        <a href="/" class="btn-action" style="background: #3B82F6; color: white; text-decoration: none; padding: 8px 14px; margin-right: 8px;">View Live Chat</a>
+        <a href="/admin/logout" class="btn-action" style="background: #64748B; color: white; text-decoration: none; padding: 8px 14px;">Sign Out</a>
+      </div>
+    </header>
+
+    <!-- Escalations Card -->
+    <div class="admin-card">
+      <h3><i class="fa-solid fa-headset"></i> Student Escalation Tickets (Talk to Admin)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Student</th>
+            <th>Contact</th>
+            <th>Query</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for esc in escalations %}
+          <tr>
+            <td>#{{ esc.id }}</td>
+            <td>{{ esc.created_at }}</td>
+            <td><strong>{{ esc.student_name }}</strong></td>
+            <td>{{ esc.student_email }}<br><small>{{ esc.student_phone }}</small></td>
+            <td>{{ esc.query_text }}</td>
+            <td>
+              <span class="badge {% if esc.status == 'PENDING' %}badge-pending{% else %}badge-resolved{% endif %}">{{ esc.status }}</span>
+            </td>
+            <td>
+              {% if esc.status == 'PENDING' %}
+              <form method="POST" action="/admin/resolve/{{ esc.id }}" style="margin: 0;">
+                <button type="submit" class="btn-action btn-resolve">Mark Resolved</button>
+              </form>
+              {% else %}
+              <span style="color: #10B981;"><i class="fa-solid fa-check"></i> Resolved</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% else %}
+          <tr><td colspan="7" style="text-align: center; color: #94A3B8;">No student escalation tickets found.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Knowledge Base Manager -->
+    <div class="admin-card">
+      <h3><i class="fa-solid fa-brain"></i> Manage Knowledge Base (Intents & FAQs)</h3>
+      <form method="POST" action="/admin/kb/add" style="margin-bottom: 25px; background: #F8FAFC; padding: 15px; border-radius: 6px;">
+        <h4>Add New Intent / FAQ Category</h4>
+        <div style="display: grid; grid-template-columns: 1fr 2fr 2fr; gap: 10px; margin-bottom: 10px;">
+          <div>
+            <label>Tag (identifier)</label>
+            <input type="text" name="tag" required placeholder="e.g. library_rules" style="width: 100%; padding: 6px;">
+          </div>
+          <div>
+            <label>Patterns (one phrase per line)</label>
+            <textarea name="patterns" rows="3" required placeholder="library timings&#10;books issue limit" style="width: 100%; padding: 6px;"></textarea>
+          </div>
+          <div>
+            <label>Responses (one reply per line)</label>
+            <textarea name="responses" rows="3" required placeholder="The library is open 24/7 during exams." style="width: 100%; padding: 6px;"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn-action btn-resolve" style="padding: 8px 16px;">➕ Save Intent to Knowledge Base</button>
+      </form>
+
+      <h4>Active Intent Tags</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Sample Patterns</th>
+            <th>Responses Count</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for tag, val in intents.items() %}
+          <tr>
+            <td><strong>{{ tag }}</strong></td>
+            <td><small>{{ val.patterns[:3]|join(', ') }}...</small></td>
+            <td>{{ val.responses|length }} response(s)</td>
+            <td>
+              <form method="POST" action="/admin/kb/delete/{{ tag }}" onsubmit="return confirm('Delete this intent?');" style="margin: 0;">
+                <button type="submit" class="btn-action btn-delete">Delete</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Conversation Logs -->
+    <div class="admin-card">
+      <h3><i class="fa-solid fa-list"></i> Recent Student Conversation Audit Logs</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>User Message</th>
+            <th>Detected Intent</th>
+            <th>Confidence</th>
+            <th>Bot Response</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for log in logs %}
+          <tr>
+            <td><small>{{ log.timestamp }}</small></td>
+            <td>{{ log.user_message }}</td>
+            <td><code>{{ log.detected_intent }}</code></td>
+            <td>
+              <span style="font-weight: bold; color: {% if log.confidence and log.confidence > 0.4 %}#059669{% else %}#DC2626{% endif %};">
+                {{ log.confidence or 0.0 }}
+              </span>
+            </td>
+            <td><small>{{ log.bot_response[:80] }}...</small></td>
+          </tr>
+          {% else %}
+          <tr><td colspan="5" style="text-align: center; color: #94A3B8;">No chat logs recorded yet.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
