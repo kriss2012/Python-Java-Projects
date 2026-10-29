@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+venv/
+.env
+data/user_uploads/
+exports/*.csv
+exports/*.json
+.coverage
+.pytest_cache/
+
