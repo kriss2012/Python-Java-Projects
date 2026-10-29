@@ -156,3 +156,4 @@ python tests/test_expense_tracker.py
 
 ## 19. License & Third-Party Notes
 Built under Logic Legend educational guidelines. Permitted for college project submissions and viva evaluations.
+
