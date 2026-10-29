@@ -463,3 +463,4 @@ class AttendanceGUI:
                 s["roll_number"], s["name"], s["department"],
                 s["attended"], s["total_sessions"], f"{s['percentage']} %", status
             ))
+
