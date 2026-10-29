@@ -131,3 +131,4 @@ class ClassifierService:
 
     def get_samples(self, domain="news"):
         return SAMPLE_NEWS_INPUTS if domain == "news" else SAMPLE_SPAM_INPUTS
+
