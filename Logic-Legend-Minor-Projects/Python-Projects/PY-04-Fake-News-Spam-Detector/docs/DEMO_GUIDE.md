@@ -75,3 +75,4 @@ Execute the test suite in terminal:
 python tests/test_classifier.py
 ```
 *All 5 unit tests pass, verifying text preprocessing, evaluation metrics, domain classification, and cross-model comparison.*
+
