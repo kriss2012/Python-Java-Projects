@@ -138,3 +138,4 @@ class NLPEngine:
 
     def get_all_intents(self):
         return self.intents
+
