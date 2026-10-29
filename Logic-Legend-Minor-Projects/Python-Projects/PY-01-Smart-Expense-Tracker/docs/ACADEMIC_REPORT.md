@@ -116,3 +116,4 @@ Given an expenditure category $C$, a target month $M$, a configured spending cei
 
 ## 7. CONCLUSION & FUTURE SCOPE
 The PY-01 Smart Expense Tracker demonstrates how structured software engineering and local persistence can solve personal budgeting challenges effectively. Future iterations will introduce recurring standing orders, multi-user household partitioning, and cloud synchronization.
+
