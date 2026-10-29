@@ -71,3 +71,4 @@ Run the automated test suite in a separate terminal:
 python tests/test_chatbot.py
 ```
 *All 6 unit tests verify intent classification, fallback behavior, SQLite logging, escalation ticket creation and resolution, and admin authentication.*
+
