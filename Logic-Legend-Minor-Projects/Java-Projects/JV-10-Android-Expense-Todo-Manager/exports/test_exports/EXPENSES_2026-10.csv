@@ -1,0 +1,4 @@
+ID,Date,Title,Amount,Category,PaymentMethod,Notes
+3,2026-10-10,"Restaurant Dinner",500.00,Food & Dining,Cash,""
+2,2026-10-08,"Metro Train Card Recharge",1000.00,Transportation,UPI,"Transit pass"
+1,2026-10-05,"Supermarket Grocery Store",2800.00,Food & Dining,Credit Card,"Updated notes"
