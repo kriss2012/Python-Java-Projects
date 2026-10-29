@@ -75,3 +75,4 @@ Run the automated test suite in your terminal:
 python tests/test_attendance.py
 ```
 *All 6 unit tests pass, verifying consent validation, duplicate suppression, manual fallback, low-attendance threshold calculation, and CSV generation.*
+
