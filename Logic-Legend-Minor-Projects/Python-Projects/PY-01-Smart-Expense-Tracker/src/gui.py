@@ -505,3 +505,4 @@ Thank you for visiting!"""
 
         # 6. Chart Visualizer
         self.root.after(100, self._draw_category_bars)
+
