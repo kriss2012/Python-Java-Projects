@@ -118,3 +118,4 @@ class DatabaseManager:
                 """, sample_budgets)
 
                 conn.commit()
+
