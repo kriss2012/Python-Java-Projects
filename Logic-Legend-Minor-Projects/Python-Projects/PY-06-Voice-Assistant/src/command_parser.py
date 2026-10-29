@@ -209,3 +209,4 @@ class CommandParser:
     def _respond(self, cmd_text, resp_text, status="SUCCESS"):
         self.db.log_command(cmd_text, resp_text, status=status)
         self.voice.speak(resp_text)
+
