@@ -73,3 +73,4 @@ To restore pristine demonstration records at any time:
 python src/main.py --seed
 ```
 Or delete `data/expenses.db` and relaunch `python src/main.py`.
+
