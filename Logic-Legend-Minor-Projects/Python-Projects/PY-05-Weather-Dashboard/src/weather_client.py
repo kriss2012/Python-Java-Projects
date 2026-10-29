@@ -193,3 +193,4 @@ class WeatherClient:
                 alerts.append(f"Forecast Alert on {day['day']}: {day['rain']}% rain chance ({day['desc']}).")
 
         return alerts
+
