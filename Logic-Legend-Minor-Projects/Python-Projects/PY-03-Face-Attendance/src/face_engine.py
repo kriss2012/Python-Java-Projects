@@ -105,3 +105,4 @@ class FaceEngine:
         # Mouth
         cv2.ellipse(img, (100, 130), (25, 10), 0, 0, 180, (40, 40, 150), 3)
         return img
+
