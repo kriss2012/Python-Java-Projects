@@ -149,3 +149,4 @@ function renderComparisonView(results) {
     </div>
   `;
 }
+
