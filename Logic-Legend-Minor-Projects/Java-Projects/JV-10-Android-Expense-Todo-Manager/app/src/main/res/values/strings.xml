@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Expense &amp; To-Do Manager</string>
+    <string name="tab_expenses">Expenses</string>
+    <string name="tab_todo">To-Do Tasks</string>
+    <string name="tab_analytics">Analytics</string>
+    <string name="title_add_expense">Add Expense</string>
+    <string name="title_add_task">Add Task</string>
+    <string name="title_budget_settings">Monthly Budgets</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+</resources>
+
