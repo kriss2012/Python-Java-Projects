@@ -57,3 +57,4 @@ class VoiceEngine:
             return {"error": "Could not decipher speech. Please repeat or type."}
         except Exception as e:
             return {"error": f"Microphone unavailable or hardware access error: {str(e)}"}
+
