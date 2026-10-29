@@ -1,0 +1,16 @@
+# Java & Android Build Artifacts
+target/
+bin/
+build/
+.gradle/
+local.properties
+*.iml
+.idea/
+.DS_Store
+
+# SQLite & Data
+data/*.db
+data/*.db-journal
+exports/*.csv
+exports/*.txt
+
