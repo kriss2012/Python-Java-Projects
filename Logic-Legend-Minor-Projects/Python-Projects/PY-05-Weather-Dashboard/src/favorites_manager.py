@@ -49,3 +49,4 @@ class FavoritesManager:
     def save_favorites(self, favs):
         with open(self.filepath, "w", encoding="utf-8") as f:
             json.dump(favs, f, indent=2)
+
