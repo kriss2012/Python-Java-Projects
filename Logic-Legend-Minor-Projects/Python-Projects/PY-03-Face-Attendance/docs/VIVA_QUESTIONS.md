@@ -67,3 +67,4 @@ The combined score ranges from 0.0 to 1.0.
 1. Deep learning embeddings using ResNet/Inception (FaceNet or ArcFace) with a Vector Database (Milvus or Chroma) for 10,000+ student rosters.
 2. IR/Blink liveness verification to defeat photo spoofing.
 3. Edge deployment on Raspberry Pi or Jetson Nano units mounted at classroom entrances.
+
