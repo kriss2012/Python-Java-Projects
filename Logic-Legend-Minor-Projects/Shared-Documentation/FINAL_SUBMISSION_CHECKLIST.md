@@ -38,3 +38,4 @@ Before presenting your minor project for college submission, internal review, or
   - Error handling and transaction management.
   - Algorithms (TF-IDF, Naive Bayes, AES-256, Dijkstra/Greedy if applicable).
   - Project limitations and future roadmap.
+
