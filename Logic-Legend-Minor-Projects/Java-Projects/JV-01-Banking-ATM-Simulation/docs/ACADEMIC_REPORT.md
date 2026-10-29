@@ -130,3 +130,4 @@ Total notes dispensed: $1 + 3 + 1 + 1 = 6$ notes.
 
 ## Conclusion
 The JV-01 Online Banking and ATM Simulation application provides a complete, fault-tolerant, and secure implementation of commercial ATM terminal software. With self-contained embedded SQLite persistence, 30 automated test assertions, and an intuitive Java Swing GUI, the project sets an exemplary standard for undergraduate academic evaluations.
+
