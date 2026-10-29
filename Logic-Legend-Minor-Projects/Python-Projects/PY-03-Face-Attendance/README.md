@@ -152,3 +152,4 @@ python tests/test_attendance.py
 
 ## 19. License & Third-Party Notes
 Built under Logic Legend educational guidelines for academic project evaluation.
+
