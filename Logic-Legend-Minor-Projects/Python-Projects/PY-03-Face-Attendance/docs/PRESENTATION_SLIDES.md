@@ -86,3 +86,4 @@
 ### Slide 11: Conclusion & Q&A
 - Delivered an ethical, robust, and verified biometric attendance application.
 - Ready for viva evaluation and live demonstration.
+
