@@ -34,7 +34,7 @@ class TestClassifier(unittest.TestCase):
 
     def test_01_text_preprocessor(self):
         """Test URL stripping, stopword removal, and normalization."""
-        raw = "URGENT: Click http://bit.ly/claim-prize to win $1,000,000 NOW and claim it!"
+        raw = "URGENT: Click http://bit.ly/claim-link to win a cash prize of $1,000,000 NOW and claim it!"
         cleaned = TextPreprocessor.clean(raw)
         self.assertNotIn("http", cleaned)
         self.assertNotIn("and", cleaned.split())
