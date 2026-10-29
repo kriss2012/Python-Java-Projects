@@ -11,6 +11,13 @@ import tkinter as tk
 # Ensure current dir is in Python module search path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# Configure console encoding safely for Windows
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 from database import DatabaseManager
 from tracker_service import TrackerService
 from gui import ExpenseTrackerGUI
@@ -20,14 +27,14 @@ def run_cli_summary(service):
     print("=" * 60)
     print("      LOGIC LEGEND PY-01 EXPENSE TRACKER - CLI SUMMARY")
     print("=" * 60)
-    print(f"Total Income   : ₹ {summary['income']:,.2f}")
-    print(f"Total Expenses : ₹ {summary['expense']:,.2f}")
-    print(f"Net Balance    : ₹ {summary['balance']:,.2f}")
+    print(f"Total Income   : INR {summary['income']:,.2f}")
+    print(f"Total Expenses : INR {summary['expense']:,.2f}")
+    print(f"Net Balance    : INR {summary['balance']:,.2f}")
     print(f"Savings Rate   : {summary['savings_rate']} %")
     print("-" * 60)
     print("Active Budgets:")
     for b in service.check_budgets():
-        print(f"  [{b['status']:^8}] {b['category']}: Spent ₹{b['spent']} of ₹{b['limit']} ({b['percent_used']}%)")
+        print(f"  [{b['status']:^8}] {b['category']}: Spent INR {b['spent']} of INR {b['limit']} ({b['percent_used']}%)")
     print("=" * 60)
 
 def main():
