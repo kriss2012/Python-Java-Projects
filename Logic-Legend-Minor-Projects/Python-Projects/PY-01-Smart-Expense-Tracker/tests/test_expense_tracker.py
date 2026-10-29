@@ -7,6 +7,7 @@ import os
 import sys
 import tempfile
 import unittest
+import gc
 
 # Add src to path
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src"))
@@ -18,13 +19,19 @@ class TestExpenseTracker(unittest.TestCase):
     def setUp(self):
         # Create an isolated temporary database for each test
         self.temp_db_fd, self.temp_db_path = tempfile.mkstemp(suffix=".db")
+        os.close(self.temp_db_fd)
         self.db_mgr = DatabaseManager(db_path=self.temp_db_path)
         self.service = TrackerService(self.db_mgr)
 
     def tearDown(self):
-        os.close(self.temp_db_fd)
-        if os.path.exists(self.temp_db_path):
-            os.remove(self.temp_db_path)
+        del self.service
+        del self.db_mgr
+        gc.collect()
+        try:
+            if os.path.exists(self.temp_db_path):
+                os.remove(self.temp_db_path)
+        except OSError:
+            pass
 
     def test_01_validation_amount(self):
         """Test amount validation boundaries."""
