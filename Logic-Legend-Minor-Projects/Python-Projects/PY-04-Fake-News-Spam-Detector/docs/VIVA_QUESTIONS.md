@@ -71,3 +71,4 @@ If $\sigma(z) \ge 0.5$, the sample is assigned to the positive class; otherwise,
 1. Implement contextual Transformer encoders such as BERT, RoBERTa, or DeBERTa.
 2. Incorporate knowledge-graph fact-checking APIs (e.g., Google Fact Check Tools API).
 3. Analyze publisher reputation metadata and domain age alongside textual content.
+
