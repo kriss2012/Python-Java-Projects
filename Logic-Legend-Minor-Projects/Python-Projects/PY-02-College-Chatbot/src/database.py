@@ -138,3 +138,4 @@ class ChatbotDatabase:
             cursor = conn.cursor()
             cursor.execute(query, params)
             return [dict(r) for r in cursor.fetchall()]
+
