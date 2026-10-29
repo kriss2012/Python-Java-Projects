@@ -54,3 +54,4 @@ Each project follows an isolated, self-contained structure:
 - **Enterprise & Web**: Spring Boot 3, Spring Web, Spring Security, OpenAPI/Swagger
 - **Mobile**: Android SDK, Java 17, MPAndroidChart, Room ORM
 - **Testing**: JUnit 5, Mockito
+
