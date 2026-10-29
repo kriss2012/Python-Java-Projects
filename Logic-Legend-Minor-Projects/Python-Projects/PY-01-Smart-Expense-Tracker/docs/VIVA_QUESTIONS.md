@@ -66,3 +66,4 @@
 
 ### Q16: How would you scale this application for enterprise or multi-user deployment?
 **Answer**: We would migrate SQLite to a hosted PostgreSQL database, transition the business logic into a REST API (using FastAPI or Spring Boot), and provide multi-tenant authentication with JWT tokens.
+
