@@ -145,3 +145,4 @@ python tests/test_weather.py
 
 ## 19. License & Third-Party Notes
 Built under Logic Legend educational guidelines for academic viva evaluations.
+
