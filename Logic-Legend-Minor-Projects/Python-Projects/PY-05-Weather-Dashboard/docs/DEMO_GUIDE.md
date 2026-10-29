@@ -74,3 +74,4 @@ Run the unit test suite:
 python tests/test_weather.py
 ```
 *All 6 unit tests pass, verifying exact formulas, mock data integrity, unit conversions, and favorites persistence.*
+
