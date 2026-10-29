@@ -62,3 +62,4 @@
 1. Incorporating a locally hosted Small Language Model (SLM) such as LLaMA-3-8B or Mistral for conversational depth.
 2. Integrating with messaging channels like Telegram or WhatsApp via webhooks.
 3. Adding multi-lingual query understanding using mBERT or Indic-NLP models.
+
