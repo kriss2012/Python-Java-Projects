@@ -115,3 +115,4 @@ class AssistantDatabase:
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM command_history ORDER BY id DESC LIMIT ?", (limit,))
             return [dict(r) for r in cursor.fetchall()]
+
