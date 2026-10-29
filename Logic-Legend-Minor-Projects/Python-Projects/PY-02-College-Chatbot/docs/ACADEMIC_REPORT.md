@@ -120,3 +120,4 @@ If $\max_i (\text{Cosine Similarity}) < \tau$ (configured threshold 0.30), the q
 
 ## 7. CONCLUSION & FUTURE SCOPE
 The PY-02 College Chatbot eliminates frontline communication bottlenecks while maintaining strict boundaries between verified knowledge and unknown topics through human escalation. Future work includes voice-based response synthesis and Telegram/WhatsApp integration.
+
