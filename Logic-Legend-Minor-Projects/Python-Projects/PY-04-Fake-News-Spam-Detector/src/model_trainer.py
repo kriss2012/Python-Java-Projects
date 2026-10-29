@@ -11,7 +11,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
+from sklearn.svm import LinearSVC
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 from sklearn.pipeline import Pipeline
 
@@ -50,7 +51,7 @@ class ModelTrainer:
         classifiers = {
             "naive_bayes": MultinomialNB(alpha=1.0),
             "logistic_regression": LogisticRegression(max_iter=1000, random_state=42),
-            "svm": SVC(kernel="linear", probability=True, random_state=42)
+            "svm": CalibratedClassifierCV(LinearSVC(random_state=42, dual=False))
         }
 
         results = {}
