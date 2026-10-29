@@ -200,3 +200,4 @@ else:
                 st.write(f"🌡️ {day['temp_max']}{unit_symbol} / {day['temp_min']}{unit_symbol}")
                 st.caption(f"{day['desc']}")
                 st.write(f"💧 {day['rain']}% rain")
+
