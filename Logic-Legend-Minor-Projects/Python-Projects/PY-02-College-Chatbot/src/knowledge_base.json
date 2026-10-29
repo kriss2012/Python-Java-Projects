@@ -1,0 +1,91 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi", "hello", "hey", "good morning", "good evening", "greetings", "is anyone there", "hello bot"
+      ],
+      "responses": [
+        "Hello! Welcome to the Logic Legend College Information Bot. How can I assist you today? You can ask about admissions, fees, placements, timetables, or campus facilities."
+      ]
+    },
+    {
+      "tag": "admissions",
+      "patterns": [
+        "how to apply for admission", "admission procedure", "what are the eligibility criteria for btech",
+        "last date for admission", "admission dates 2026", "how can i get admission", "cutoff marks for admission"
+      ],
+      "responses": [
+        "Admissions for the upcoming academic year are open online. Candidates must have passed 10+2 with Physics, Mathematics, and Chemistry with a minimum aggregate of 60%. Applications must be submitted through the university portal before July 31st."
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "what is the fee structure", "how much is tuition fee", "fee payment options",
+        "can i pay fees in installments", "semester fees", "hostel fees", "late fee penalty"
+      ],
+      "responses": [
+        "Annual tuition fees for undergraduate engineering programs is ₹ 1,25,000 per annum. Fees can be paid in two semester installments via net banking, UPI, or demand draft. A ₹ 50/day late fine applies after the scheduled deadline."
+      ]
+    },
+    {
+      "tag": "timetables",
+      "patterns": [
+        "what are college hours", "class schedule", "when do classes start",
+        "exam timetable", "academic calendar", "semester dates", "what time does college start"
+      ],
+      "responses": [
+        "Regular academic classes run Monday to Friday from 9:00 AM to 4:30 PM. The mid-semester examinations commence in the 8th week of the semester, and semester-end examinations start in December and May."
+      ]
+    },
+    {
+      "tag": "placements",
+      "patterns": [
+        "what is the placement record", "highest package offered", "average package",
+        "top companies visiting campus", "who are top recruiters", "placement statistics"
+      ],
+      "responses": [
+        "Our institution maintains a 92% placement rate. The highest domestic package for the recent batch was ₹ 44 LPA, with an average package of ₹ 8.5 LPA. Key recruiters include Google, Microsoft, Amazon, Infosys, and TCS."
+      ]
+    },
+    {
+      "tag": "departments",
+      "patterns": [
+        "what courses are offered", "which engineering branches are available",
+        "computer science department", "available departments", "departments in college"
+      ],
+      "responses": [
+        "We offer accredited B.Tech and M.Tech degrees in Computer Science & Engineering, Artificial Intelligence & Data Science, Electronics & Communication, Mechanical Engineering, and Information Technology."
+      ]
+    },
+    {
+      "tag": "facilities",
+      "patterns": [
+        "campus facilities", "is there a hostel", "hostel accommodation", "library timings",
+        "sports facilities", "is wifi available", "cafeteria and food"
+      ],
+      "responses": [
+        "Our 50-acre green campus features high-speed Wi-Fi, separate air-cooled hostels for boys and girls, a central library open 24/7 during exam weeks, a gymnasium, multi-cuisine cafeterias, and an Olympic-size athletic complex."
+      ]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": [
+        "scholarships available", "financial aid", "merit scholarship", "fee concessions"
+      ],
+      "responses": [
+        "Merit scholarships up to 100% tuition waiver are awarded to students ranking in the top 500 of national entrance tests or scoring above 95% in 12th board examinations. Need-based concessions are available upon committee review."
+      ]
+    },
+    {
+      "tag": "contact_admin",
+      "patterns": [
+        "contact college office", "talk to human", "escalate query", "admin phone number", "email address of registrar", "principal contact"
+      ],
+      "responses": [
+        "You can connect directly with our Academic Administration Office via email at 'admissions@logiclegend.edu' or telephone at +91-11-2345-6789 (Mon-Sat, 9 AM - 5 PM). You can also click the 'Talk to Admin' button below to log an escalation."
+      ]
+    }
+  ]
+}
