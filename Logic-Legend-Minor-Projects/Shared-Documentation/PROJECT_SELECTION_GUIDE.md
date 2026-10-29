@@ -67,3 +67,4 @@ Choosing the right minor project is the foundational step towards achieving acad
 1. **Understand Every Line of Code**: Be prepared to explain architectural choices, design patterns (Singleton, MVC, DAO, Repository), and database schemas.
 2. **Highlight the Standout Feature**: Each project in this suite includes a dedicated standout feature (e.g., OCR fallback, model comparisons, transactional locks, PDF invoice generation).
 3. **Be Transparent on Limitations**: Demonstrating awareness of boundaries (e.g., lighting effects on facial recognition, rate-limits on web scrapers, socket unencrypted overheads) impresses evaluators more than claiming 100% perfection.
+
