@@ -238,3 +238,4 @@ java -cp "bin;lib\sqlite-jdbc.jar" com.logiclegend.banking.Main
 
 ## 18. License
 Educational Open-Source License — Free for academic, learning, and college submission use.
+

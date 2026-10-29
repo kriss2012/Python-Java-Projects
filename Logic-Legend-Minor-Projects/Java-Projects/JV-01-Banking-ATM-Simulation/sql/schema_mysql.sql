@@ -33,3 +33,4 @@ CREATE TABLE IF NOT EXISTS transactions (
     FOREIGN KEY (account_number) REFERENCES accounts(account_number) ON DELETE CASCADE,
     INDEX idx_tx_account (account_number)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+

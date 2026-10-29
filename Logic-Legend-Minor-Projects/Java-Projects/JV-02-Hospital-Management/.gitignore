@@ -1,0 +1,11 @@
+bin/
+target/
+*.class
+data/*.db
+data/*.db-journal
+exports/*.txt
+exports/*.pdf
+.idea/
+*.iml
+.vscode/
+

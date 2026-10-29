@@ -55,3 +55,4 @@ If either rule is violated, the withdrawal is rejected with an informative error
 
 ### Q15: How can this system be extended for real-world banking integration?
 **Answer**: By integrating an ISO 8583 financial transaction messaging protocol gateway, connecting to centralized core banking systems (CBS) such as Finacle or Temenos, and adding Time-based One-Time Password (TOTP) two-factor authentication via SMS/Email.
+

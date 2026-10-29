@@ -103,3 +103,4 @@ java -cp "bin;lib\sqlite-jdbc.jar" com.logiclegend.banking.Main
    - Student should explain salted SHA-256 hashing and unique random salts preventing rainbow table lookups.
 3. *"How does the ATM decide how many 500 or 100 rupee notes to give you?"*
    - Student should explain the greedy denomination algorithm in `BankingService.calculateDenominations()`.
+

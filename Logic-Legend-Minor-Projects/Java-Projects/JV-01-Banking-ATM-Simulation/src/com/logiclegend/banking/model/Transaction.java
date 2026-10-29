@@ -58,3 +58,4 @@ public class Transaction {
                 timestamp != null ? timestamp : "N/A", transactionRef, txType, amount, balanceAfter, description);
     }
 }
+

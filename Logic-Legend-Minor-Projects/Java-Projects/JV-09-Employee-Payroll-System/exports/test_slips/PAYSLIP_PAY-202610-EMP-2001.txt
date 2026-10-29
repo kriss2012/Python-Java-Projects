@@ -1,0 +1,25 @@
+========================================================================================
+                     LOGIC LEGEND TECHNOLOGIES PRIVATE LIMITED
+                 Corporate Tech Park, Outer Ring Road, Bangalore - 560103
+                             MONTHLY SALARY PAYSLIP
+========================================================================================
+Payslip Number: PAY-202610-EMP-2001       Pay Period:    2026-10
+Employee ID:    EMP-2001                  Full Name:     Aarav K. Sharma
+Designation:    Lead Architect            Department:    Engineering
+Bank Account:   HDFC001234                PAN Number:    ABCDE1234F
+Total Days:     30                        Days Worked:   30 (Unpaid Leaves: 0)
+----------------------------------------------------------------------------------------
+EARNINGS & ALLOWANCES                      | STATUTORY DEDUCTIONS                      
+----------------------------------------------------------------------------------------
+Basic Earned                :    75,000.00 | Provident Fund (EPF 12%)    :     9,000.00
+House Rent Allowance (HRA)  :    30,000.00 | ESI Contribution            :         0.00
+Dearness Allowance (DA)     :    15,000.00 | Professional Tax (PT)       :       200.00
+Conveyance Allowance        :     2,000.00 | Tax Deducted (TDS)          :    10,300.00
+Special Bonus Allowance     :     5,000.00 |                             :             
+----------------------------------------------------------------------------------------
+GROSS EARNINGS              :   127,000.00 | TOTAL DEDUCTIONS            :    19,500.00
+========================================================================================
+                          NET SALARY PAYABLE: INR   107,500.00
+========================================================================================
+  Payment Mode: Direct Bank Credit | This is a computer-generated official payroll slip.
+========================================================================================

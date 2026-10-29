@@ -208,3 +208,4 @@ public class TestRunner {
         assertEquals("Latest transaction was WITHDRAWAL", "WITHDRAWAL", list.get(0).getTxType());
     }
 }
+

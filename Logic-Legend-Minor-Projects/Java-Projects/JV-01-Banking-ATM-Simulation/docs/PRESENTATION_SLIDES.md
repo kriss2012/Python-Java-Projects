@@ -104,3 +104,4 @@
   - Two-factor OTP authentication via SMS/Email.
   - Multi-currency forex exchange (USD, EUR, GBP).
   - Web/Mobile companion app using Spring Boot REST APIs.
+

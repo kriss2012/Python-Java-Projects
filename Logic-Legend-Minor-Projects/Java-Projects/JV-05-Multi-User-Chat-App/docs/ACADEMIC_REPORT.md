@@ -158,3 +158,4 @@ The automated test runner (`tests/TestRunner.java`) executed 29 test assertions 
 - Administrator kick workflow and broadcast notifications.
 - Protocol wire serialization with special characters, emojis, and newlines.
 - **Result: 29 / 29 assertions passed (100% success rate)**.
+

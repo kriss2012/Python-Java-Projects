@@ -1,0 +1,9 @@
+target/
+bin/
+*.class
+.idea/
+*.iml
+data/*.db
+exports/*.txt
+exports/*.pdf
+

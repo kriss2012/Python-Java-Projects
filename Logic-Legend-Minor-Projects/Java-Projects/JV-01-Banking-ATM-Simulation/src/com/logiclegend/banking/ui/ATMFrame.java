@@ -546,3 +546,4 @@ public class ATMFrame extends JFrame {
         JOptionPane.showMessageDialog(this, "Please take your card. Thank you for banking with us!", "Session Terminated", JOptionPane.INFORMATION_MESSAGE);
     }
 }
+
