@@ -237,3 +237,4 @@ body {
 .modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 16px; }
 .btn-cancel { background: #E2E8F0; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; }
 .btn-submit { background: #2563EB; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+
