@@ -86,3 +86,4 @@ $$\text{Alert}(d) = \begin{cases}
 
 ## 7. CONCLUSION & FUTURE SCOPE
 The PY-05 Weather Dashboard provides an accessible, responsive, and resilient meteorological analytics tool. Future enhancements will integrate Air Quality Index (AQI) pollutant sensors and multi-year climate anomaly comparisons.
+
