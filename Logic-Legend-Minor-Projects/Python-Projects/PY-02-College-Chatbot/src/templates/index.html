@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logic Legend — AI College Query Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Header -->
+    <header class="chat-header">
+      <div class="header-left">
+        <div class="bot-avatar"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div>
+          <h2>Logic Legend Campus AI</h2>
+          <span class="status-indicator"><span class="status-dot"></span> Online • Official College Portal</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <button id="btnEscalate" class="btn-escalate" title="Talk to College Administrator">
+          <i class="fa-solid fa-headset"></i> Talk to Admin
+        </button>
+        <a href="/admin" class="btn-admin-link" title="Staff Administration Panel"><i class="fa-solid fa-lock"></i></a>
+      </div>
+    </header>
+
+    <!-- Suggested Topics Carousel -->
+    <div class="suggestions-bar">
+      <span class="sugg-label"><i class="fa-regular fa-lightbulb"></i> Suggested:</span>
+      <div class="chips-container" id="chipsContainer">
+        {% for s in suggestions %}
+          <button class="chip" onclick="sendSuggested('{{ s }}')">{{ s }}</button>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Messages Container -->
+    <main class="chat-messages" id="chatMessages">
+      <div class="message-row bot-row">
+        <div class="avatar-mini"><i class="fa-solid fa-robot"></i></div>
+        <div class="message-bubble bot-bubble">
+          <p>Hello! I am your <strong>College Information Assistant</strong>. Ask me about admissions, fees, syllabus, timetables, placements, scholarships, or hostel facilities.</p>
+          <div class="meta-info">
+            <span class="verified-badge"><i class="fa-solid fa-check-circle"></i> Official Verified</span>
+            <span class="msg-time">Just now</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Chat Input Area -->
+    <footer class="chat-input-area">
+      <form id="chatForm" onsubmit="handleSend(event)">
+        <button type="button" id="micBtn" class="btn-icon" title="Voice Input" onclick="toggleVoiceInput()">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
+        <input type="text" id="userInput" placeholder="Ask a question about admissions, placements, fees..." autocomplete="off">
+        <button type="submit" id="sendBtn" class="btn-send" title="Send Query">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </footer>
+  </div>
+
+  <!-- Escalation Modal -->
+  <div id="escalateModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-user-tie"></i> Connect with College Administration</h3>
+        <button class="modal-close" onclick="closeEscalateModal()">&times;</button>
+      </div>
+      <form id="escalateForm" onsubmit="submitEscalation(event)">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="escName" required placeholder="e.g. Rahul Sharma">
+        </div>
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" id="escEmail" required placeholder="e.g. student@gmail.com">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="escPhone" placeholder="e.g. +91 9876543210">
+        </div>
+        <div class="form-group">
+          <label>Your Specific Query *</label>
+          <textarea id="escQuery" rows="3" required placeholder="Describe what information you need..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" onclick="closeEscalateModal()">Cancel</button>
+          <button type="submit" class="btn-submit">Submit Escalation Ticket</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
