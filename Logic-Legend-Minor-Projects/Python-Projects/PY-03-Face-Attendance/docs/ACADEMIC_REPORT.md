@@ -112,3 +112,4 @@ Where:
 
 ## 7. CONCLUSION & FUTURE SCOPE
 The PY-03 Face Recognition Attendance System provides an accurate, ethical, and resilient solution for educational attendance recording. Future enhancements will introduce 3D depth-map liveness detection to eliminate 2D photo spoofing and automated WhatsApp/SMS parent notifications.
+
