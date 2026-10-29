@@ -68,3 +68,4 @@ These are implemented with single decimal precision rounding.
 1. Integrating satellite radar imagery and Doppler wind vectors.
 2. Incorporating agricultural degree-day (GDD) calculations for farmers.
 3. Triggering automated SMS/email alerts via Celery background tasks when storm warnings are detected.
+
